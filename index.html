@@ -20,14 +20,73 @@ body {background-color:black;}
 ul {color: white;
 	font-family: 'Arvo', serif;
 	font-size:20px;
-	display:inline;
+	display: inline-block;
+	}
+	footer {
+            overflow: hidden;
+            color:white;
+        }
+        .social {
+            float: center;
+            width: 45%;
+            max-width: 300px;
+            margin: 0;
+            text-align: right;
+        }
+        .social li {
+            display: inline-block;
+            margin-left: 30px;
+        }
+        .social li a {
+            display: inline-block;
+            width: 41px;
+            height: 41px;
+            background-size: 41px 41px;
+            background: transparent;
+            /*background-image: url(img/social.png);*/
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+ .social li.twitter a { background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDEgNDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQxIDQxIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRjlGOUY5IiBkPSJNMjAuNSwwQzkuMiwwLDAsOS4yLDAsMjAuNVM5LjIsNDEsMjAuNSw0MVM0MSwzMS44LDQxLDIwLjUNCglTMzEuOCwwLDIwLjUsMHogTTI5LjgsMThjMCwwLDAuNyw2LjItNS4zLDEwQzE3LjMsMzIuNCwxMSwyOC4xLDExLDI4LjFzMy4yLDAuNyw2LjMtMS43Yy0zLjEsMC00LTIuNy00LTIuN3MwLjgsMC4yLDEuOS0wLjENCgljLTAuNCwwLTMuMi0wLjctMy40LTRjMS4xLDAuNiwxLjksMC41LDEuOSwwLjVzLTMuMi0yLTEuMy01LjNjMy44LDQuNCw4LjksNC4yLDguOSw0LjJzLTAuOC0zLjIsMi40LTQuNmMzLjEtMS4yLDUsMC45LDUsMC45DQoJczEsMCwyLjctMWMtMC40LDEuNS0xLjksMi4yLTEuOSwyLjJzMS4xLDAsMi41LTAuNkMzMS4xLDE3LjIsMjkuOCwxOCwyOS44LDE4eiIvPg0KPC9zdmc+DQo=); }
+
+        .social li.facebook a { background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDEgNDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQxIDQxIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRjlGOUY5IiBkPSJNMjAuNSwwQzkuMiwwLDAsOS4yLDAsMjAuNVM5LjIsNDEsMjAuNSw0MVM0MSwzMS44LDQxLDIwLjUNCglTMzEuOCwwLDIwLjUsMHogTTI0LjcsMjAuNWwtMi43LDBsMCw5LjVsLTQsMHYtOS41bC0yLDB2LTMuMmwyLDB2LTIuM2MwLTQuMSw0LjEtMy45LDQuMS0zLjlIMjV2My4zYzAsMC0wLjUsMC0xLjksMA0KCWMtMS4zLDAtMS4xLDEuMS0xLjEsMS4xbDAsMS44bDMsMEwyNC43LDIwLjV6Ii8+DQo8L3N2Zz4NCg==); }
+
+        .social li.linkedin a { background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDEgNDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQxIDQxIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRjlGOUY5IiBkPSJNMjAuNSwwQzkuMiwwLDAsOS4yLDAsMjAuNVM5LjIsNDEsMjAuNSw0MVM0MSwzMS44LDQxLDIwLjUNCglTMzEuOCwwLDIwLjUsMHogTTE2LjEsMjkuM2gtMy45VjE2LjdoMy45VjI5LjN6IE0xNC4xLDE1LjFjLTEuMiwwLTIuMS0wLjktMi0yYzAtMS4xLDAuOC0yLDIuMS0yczIuMSwwLjksMi4xLDINCglDMTYuMiwxNC4yLDE1LjQsMTUuMSwxNC4xLDE1LjF6IE0yOS45LDI5LjNIMjZ2LTdjMC0xLjYtMC42LTIuNy0yLTIuN2MtMS4xLDAtMS43LDAuNy0yLDEuNWMtMC4xLDAuMi0wLjIsMC42LTAuMiwxdjcuM0gxOHYtOC42DQoJYzAtMS42LTAuMS0yLjktMC4xLTRoMy40bDAuMiwxLjdoMC4xYzAuNS0wLjgsMS44LTIsMy45LTJjMi42LDAsNC41LDEuNyw0LjUsNS40VjI5LjN6Ii8+DQo8L3N2Zz4NCg==); }
+
+        .social li.googleplus a { background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDEgNDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQxIDQxIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRjlGOUY5IiBkPSJNMjIuNCwyNS43bC0xLjktMS40YzAsMC01LjMtMC4zLTUuMywyLjhjMC4yLDMuMSw0LjQsMi44LDQuNCwyLjgNCgkJczMuNiwwLjIsMy42LTIuNkMyMy4yLDI2LjMsMjIuNCwyNS43LDIyLjQsMjUuN3oiLz4NCgk8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0Y5RjlGOSIgZD0iTTIxLjUsMTYuM2MtMS4xLTMuNC0zLjYtMi40LTMuNi0yLjRzLTIuMywwLjgtMS4xLDQuMg0KCQljMS40LDMuNCwzLjYsMi4yLDMuNiwyLjJTMjIuNywxOS45LDIxLjUsMTYuM3oiLz4NCgk8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0Y5RjlGOSIgZD0iTTIwLjUsMEM5LjIsMCwwLDkuMiwwLDIwLjVTOS4yLDQxLDIwLjUsNDFTNDEsMzEuOCw0MSwyMC41DQoJCVMzMS44LDAsMjAuNSwweiBNMTguNywzMWMtNS44LDAtNS43LTMuMy01LjctMy4zcy0wLjYtMy43LDYuNi00LjFjLTEuMy0xLjItMC41LTIuNS0wLjUtMi41cy00LjcsMC43LTQuOS0zLjcNCgkJYzAtNC41LDUuNy00LjQsNS43LTQuNGw1LjQsMGwtMS41LDAuOGgtMS41YzAsMCwxLjcsMS4yLDEuNywzLjJjMC4yLDEuOS0xLjcsMy4xLTEuNywzLjFzLTEuNywxLjItMC44LDIuMQ0KCQljMy41LDIuNSwzLjQsMy4zLDMuNCw0LjNDMjUsMjcuMywyNC4yLDMwLjgsMTguNywzMXogTTMzLDE3LjZsLTMuMywwVjIxaC0xLjFsMC0zLjRsLTMuNCwwdi0xLjFoMy40di0zLjNoMS4ybDAsMy4zSDMzTDMzLDE3LjZ6Ig0KCQkvPg0KPC9nPg0KPC9zdmc+DQo=); }
+}}
 }
-img {
-	position: absolute;
-	left:190px;
-	top:170px;
-	z-index: -1;
-}
+ .mailing-list h2 {
+            margin-bottom: 28px;
+            text-transform: uppercase;
+        }
+        form input {
+            width: 25%;
+            height: 56px;
+            padding: 4px 0 0 3%;
+            border: blue;
+        }
+        form input#surname, form input#email {
+            margin-left: -2px;
+        }
+        form input#submit {
+            position: relative;
+            width: 15%;
+            height: 60px;
+            top: -2px;
+            margin: 0 0 0 -3px;
+            padding: 0;
+            color: #fff;
+            background-color: #e32b31;
+            text-align: center;
+            border: blue;
+            borer-radius: 0;
+            -webkit-appearance: none;
+        }
+        form input#submit:hover {
+            cursor: pointer;
+        }
+
 </style>
 
 <h1>Welcome to Youngens</h1>
@@ -41,21 +100,36 @@ img {
   <li>Summer</li>
 </ul></left>
 
- <img src="http://photos.pcpro.co.uk/blogs/wp-content/uploads/2009/07/british-flag-on-map.jpg" 
-style="width:500px;
-height:500px">
+ul li img {
+    vertical-align: middle;
+}
+ <img style="text-align:center;top:50px;width:500px;
+height:500px"
+src="http://photos.pcpro.co.uk/blogs/wp-content/uploads/2009/07/british-flag-on-map.jpg">
+</ul>
 
    
    </div>
 </div>
 
-<p></p>
 
-<div id='social-buttons'>
-      <button class='btn btn-twitter btn-lg'>Twitter</button>
-      <button class='btn btn-facebook btn-lg'>Facebook</button>
-      <button class='btn btn-pinterest btn-lg'>Pinterest</button>
-    </div>
+        <div class="mailing-list">
+                    <form action="http://futureinsights.us5.list-manage.com/subscribe?u=d95ebf4436bdbe15b64a26083&amp;id=78d70a37f4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                    <h2>Sign up for updates:</h2>
+                    <input type="text" id="txtNewsletterFirstName" name="MERGE1" placeholder="First Name" />
+                    <input type="text" id="txtNewsletterLastName" name="MERGE2" placeholder="Surname" />
+                    <input type="email" id="txtNewsletterEmail" name="EMAIL" placeholder="Email Address" />
+                    <input type="submit" id="submit" name="submit" value="Submit" />
+                </form>
+            </div>
+<footer>
+	<ul class="social" style="texcenter">
+                <li class="twitter"><a target="_blank" href="http://twitter.com/FOWD" title="Twitter"></a></li>
+                <li class="facebook"><a target="_blank" href="https://www.facebook.com/FOWD" title="Facebook"></a></li>
+                <li class="linkedin"><a target="_blank" href="https://www.linkedin.com/company/future-insights" title="LinkedIn"></a></li>
+                <li class="googleplus"><a target="_blank" href="https://plus.google.com/+Futureinsights" title="Google+"></a></li>
+            </ul>
+        </footer>
 
 </body>
 </html>
